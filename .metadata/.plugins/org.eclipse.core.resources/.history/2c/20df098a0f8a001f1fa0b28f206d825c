@@ -1,0 +1,40 @@
+package Stack;
+
+import java.util.Scanner;
+
+public class StackCharClassMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		Scanner sc=new Scanner(System.in);
+		StackCharClass obj=new StackCharClass();
+		
+		System.out.println("Enter the word");
+		String word=sc.next();
+		
+		
+		for(int i=0;i<word.length();i++)
+		
+			
+			obj.push(word.charAt(i));
+			
+			
+		
+		String r_word="";
+		
+		while(obj.is_Empty()!=true)
+		{
+			
+			r_word+=obj.pop();
+		}
+		//read word from user
+		
+		
+		
+		
+
+	}
+
+}

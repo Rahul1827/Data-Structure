@@ -1,0 +1,22 @@
+package Stack;
+
+import java.util.Scanner;
+
+public class StackDecimalToBinaryMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		StackDecimalToBinary obj = new StackDecimalToBinary();//object created
+		System.out.println("Enter the number");
+		int num=sc.nextInt();
+//		obj.create_Stack(size:64);
+		for(int i=0;i<num;i++)
+		{
+		
+		}
+
+	}
+
+}

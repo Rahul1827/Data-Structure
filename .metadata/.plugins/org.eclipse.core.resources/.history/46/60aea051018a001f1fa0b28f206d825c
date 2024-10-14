@@ -1,0 +1,52 @@
+package Stack;
+import java.util.Scanner;
+
+public class StackMain {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		stackDemo1  stk = new stackDemo1();
+		
+		Scanner sc= new Scanner (System.in);
+		
+		int ch;
+	   
+		do {
+			
+			System.out.println("Stack Menu");
+			System.out.println("==========");
+            System.out.println("1. Push");
+            System.out.println("2. Pop");
+            System.out.println("3. Peek");
+            System.out.println("4. Print all the elements");
+            System.out.println("0. Exit");
+            
+            System.out.println("============");
+            System.out.println("Enter your choice");
+            
+            
+            ch=sc.nextInt();
+            
+            switch(ch)
+            
+            {
+            
+            case 1:
+            	
+             if(stk.is_Full())
+             {
+            	 
+            	 System.out.println("Stack is full");
+             }
+            	
+            
+            }
+            
+		}
+		
+		
+	
+
+	}
+
+}
