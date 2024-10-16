@@ -1,0 +1,27 @@
+package LinkedList;
+
+public class circularDoublyLinkedList {
+
+	CDnode root, last;
+	
+	void create_List()
+	{
+		root=last=null;
+	}
+	
+	void insert_Left(int data)
+	{
+		CDnode n= new CDnode(data);
+		
+		if(root==null)
+		{
+			
+			root=last=n;
+			root.next=root;
+			root.pr
+			
+		}
+		
+	}
+	
+}

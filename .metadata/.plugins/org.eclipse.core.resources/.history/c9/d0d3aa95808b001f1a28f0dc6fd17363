@@ -1,0 +1,29 @@
+package LinkedList;
+
+public class Dnode {
+	int data;
+	Dnode left, right;
+
+	public Dnode(int data) {
+
+		this.data = data;
+		left = right = null;
+	}
+	
+	 void insert_left(int data) {
+	        Dnode n = new Dnode(data);
+	        if (right == left)
+	        {
+	           right=left=null;
+	        }
+	        else {
+	            n.next = root;//1
+	            root = n;//2
+	            last.next=root;//3
+	        }
+	        System.out.println(root.data + " inserted");
+
+	    }
+
+
+}

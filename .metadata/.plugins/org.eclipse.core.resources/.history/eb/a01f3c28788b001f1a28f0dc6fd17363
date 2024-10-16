@@ -1,0 +1,102 @@
+package LinkedList;
+
+public class circularLinkList {
+	
+	 Node root,last;
+
+	    void create_list() {
+	        root = last=null; //prepairing with empty
+	    }
+
+	    void insert_left(int data) {
+	        Node n = new Node(data);
+	        if (root == null) {
+	            root =last= n;//becomes 1st so root last.next=root;
+	        } else {
+	            n.next = root;
+	            root = n;
+	            last.next=root;
+	        }
+	        System.out.println(root.data + " inserted");
+	    }
+
+//	    void delete_left() {
+//	        if (root == null) {
+//	            System.out.println("Empty List");
+//	        } else {
+//	            Node t = root;
+//	            root = root.next;
+//	            last=last.next;
+//	            System.out.println(t.data + " deleted");
+//	        }
+//	    }
+	    
+	    
+	    void delete_left() {
+	        if (root == null) {
+	            System.out.println("Empty List");
+	            return;
+	        }
+	        
+	        Node t = root; // Node to be deleted
+	        if (root == last) {
+	            // Only one node in the list
+	            root = null;
+	            last = null;
+	        } else {
+	            // More than one node in the list
+	            last.next = root.next; // Update the last node's next pointer
+	            root = root.next; // Move the root to the next node
+	        }	        
+	        System.out.println(t.data + " deleted");
+	    }
+
+	    
+
+	    void insert_right(int data) {
+	        Node n = new Node(data);
+	        if (root == null) {
+	            root =last = n;
+	            last.next=root;
+	        } else {
+	           last.next=n;
+	           last=n;
+	            last.next = root;
+	            
+	        }
+	        System.out.println(data + " inserted");
+	    }
+
+	    void delete_right() {
+	        if (root == null)
+	            System.out.println("Empty List");
+	        else {
+	            Node t, t2;
+	            t = t2 = root;
+	            while (t.next != null) {
+	                t2 = t;
+	                t = t.next;
+	            }
+	            if (t == root)
+	                root = null;
+	            else
+	                t2.next = null;
+	            System.out.println(t.data + " deleted");
+	        }
+	    }
+
+	    void print_list() {
+	        if (root == null)
+	            System.out.println("List Empty");
+	        else {
+	            Node t = root;
+	            while (t != null) {
+	                System.out.print("|" + t.data + "|->");
+	                t = t.next;
+	            }
+	            System.out.println("null");
+	        }
+	    }
+
+
+}

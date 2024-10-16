@@ -1,0 +1,19 @@
+package LinkedList;
+
+public class CDnode {
+	
+	
+	
+	    int data;
+	    Node next;
+	    Node prev;
+
+	    CDnode(int data) {
+	        this.data = data;
+	        this.next = null;
+	        this.prev = null;
+	    }
+	}
+
+
+

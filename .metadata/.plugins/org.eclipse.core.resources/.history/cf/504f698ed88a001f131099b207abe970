@@ -1,0 +1,150 @@
+//package LinkedList;
+//import java.util.Scanner;
+//
+//public class LinkedListClassNew {
+//
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//		
+//		Scanner sc=new Scanner(System.in);
+//		LinkedListClass lnk= new LinkedListClass();
+//		System.out.println("Enter the size of the Linked list");
+//		int size=sc.nextInt();
+//		
+//		int ch,e;
+//		do
+//		{
+//		System.out.println("Linked List Menu");
+//		System.out.println("-----------");
+//		System.out.println("1.Create Linked List");
+//		System.out.println("2.Insert element into left");
+//		System.out.println("3.Delete element from left");
+//		System.out.println("4. Insert element into right");
+//		System.out.println("5.Delete element from right");
+//		System.out.println("6. Print the Linked List");
+//		
+//		System.out.println("7.Search elements in linked list");
+//		System.out.println("0.Exit");
+//		System.out.println("-----------");
+//		System.out.println("Choice:");
+//		ch=in.nextInt();
+//		switch(ch)
+//		{
+//		case 1:
+//		if(obj.is_Full()!=true)//not full 
+//			{
+//		System.out.println("Enter a number:");
+//		e=in.nextInt();
+//		obj.Enqueue(e);
+//		}
+//		else {
+//		System.out.println("Queue Full");
+//		}
+//		break;
+//		case 2:
+//		if(obj.is_Empty()!=true)//not empty 
+//			{
+//		System.out.println("Element Dequeued is "+obj.Dequeue());
+//		}
+//		else {
+//		System.out.println("Queue Empty");
+//		}
+//		break;
+//		case 3:
+//		if(obj.is_Empty()!=true)//not empty 
+//			{
+//		System.out.println("Element @peek is "+obj.peek());
+//		}
+//		else {
+//		System.out.println("Queue Empty");
+//		}
+//		break;
+//		case 4:
+//		if(obj.is_Empty()!=true)//not empty
+//			{
+//		System.out.println("Elements in Queue are\n");
+//		obj.print_Queue();;
+//		}
+//		else {
+//		System.out.println("Queue Empty");
+//		}
+//		break;
+//		case 0:
+//		System.out.println("Thanks for using code.....");
+//		break;
+//		default:
+//		System.out.println("Wrong option selected:");
+//		break;
+//		}
+//
+//		}while(ch!=0);
+//		}
+//		
+//
+//	}
+//
+//}
+
+
+package LinkedList;
+
+import java.util.Scanner;
+
+public class LinkedListMain {
+    public static void main(String[] args) {
+        LinkedListClass linkedList = new LinkedListClass();
+        linkedList.create_list(); // Initialize the linked list
+
+        Scanner scanner = new Scanner(System.in);
+        int choice;
+
+        do {
+            System.out.println("\nMenu:");
+            System.out.println("1. Insert Left");
+            System.out.println("2. Insert Right");
+            System.out.println("3. Delete Left");
+            System.out.println("4. Delete Right");
+            System.out.println("5. Print List");
+            System.out.println("6. Search List");
+            System.out.println("0. Exit");
+            System.out.print("Enter your choice: ");
+            choice = scanner.nextInt();
+
+            switch (choice) {
+                case 1:
+                    System.out.print("Enter data to insert left: ");
+                    int leftData = scanner.nextInt();
+                    linkedList.insert_left(leftData);
+                    break;
+                case 2:
+                    System.out.print("Enter data to insert right: ");
+                    int rightData = scanner.nextInt();
+                    linkedList.insert_right(rightData);
+                    break;
+                case 3:
+                    linkedList.delete_left(0); // We don't need data for delete left
+                    break;
+                case 4:
+                    linkedList.delete_right();
+                    break;
+                case 5:
+                    linkedList.print_list();
+                    break;
+                case 6:
+                    System.out.print("Enter data to search: ");
+                    int searchData = scanner.nextInt();
+                    linkedList.search_list(searchData);
+                    break;
+                case 0:
+                    System.out.println("Exiting...");
+                    break;
+                default:
+                    System.out.println("Invalid choice, please try again.");
+            }
+        } while (choice != 0);
+
+        scanner.close();
+    }
+}
+
+
