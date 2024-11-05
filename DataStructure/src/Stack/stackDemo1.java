@@ -13,14 +13,14 @@ public class stackDemo1 {
 		
 	}
 	
-	void push(int e)
+	public void push(int e)
 	{
 		
 		tos++;
 		stack[tos]=e;
 		System.out.println("Element "+e+" Pushed:");
 	}
-	boolean is_Full()
+	public boolean is_Full()
 
 	{
 		if(tos==MaxSize-1)
@@ -37,7 +37,7 @@ public class stackDemo1 {
 		
 	}
 	
-	int pop() {
+	public int pop() {
 		int temp = stack[tos];
 		tos--;
 		return (temp);
@@ -47,18 +47,18 @@ public class stackDemo1 {
 		
 	
 
-boolean is_Empty() {
+public boolean is_Empty() {
 if (tos == -1)
 return true;
 else
 return false;
 }
 
-int peek() {
+public int peek() {
 return (stack[tos]);
 }
 
-void print_Stack() {//lifo print System.out.println("Stack has");
+public void print_Stack() {//lifo print System.out.println("Stack has");
 for (int i = tos; i >= 0; i--) {
 System.out.println(stack[i]);
 }

@@ -6,10 +6,18 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value="next"/>
 		<list key="findhistory">
+			<item value="nextLine"/>
+			<item value="print"/>
+			<item value="DDDDDnode"/>
+			<item value="Node"/>
 			<item value="create_Stack"/>
 		</list>
 		<list key="replacehistory">
+			<item value="next"/>
+			<item value="println"/>
+			<item value="Dnode"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
